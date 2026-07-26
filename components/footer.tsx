@@ -11,86 +11,78 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-4 md:gap-12">
           {/* Logo & Copyright */}
           <div className="sm:col-span-4 md:col-span-1">
-            <Link href="/" className="flex items-center gap-3">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-surface transition hover:border-accent-lime">
-                <svg
-                  viewBox="0 0 24 24"
-                  className="h-4 w-4 text-accent-lime"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <line x1="6" y1="3" x2="6" y2="21" />
-                  <line x1="12" y1="6" x2="12" y2="21" />
-                  <line x1="18" y1="9" x2="18" y2="21" />
-                </svg>
-              </div>
-              <span className="font-bold text-foreground transition hover:text-accent-lime">SEEKOLABS</span>
+            <Link href="/" className="text-lg font-bold text-foreground transition hover:opacity-80">
+              SEEKOLABS
             </Link>
-            <p className="mt-4 text-xs text-text-secondary">
+            <p className="mt-4 text-sm text-text-secondary">
+              Build apps that scale globally.
+            </p>
+            <p className="mt-6 text-xs text-text-secondary">
               © {currentYear} Seekolabs. All rights reserved.
             </p>
           </div>
 
-          {/* Links */}
+          {/* Company */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-foreground">Company</h4>
-            <ul className="mt-4 space-y-2">
+            <h4 className="text-sm font-semibold text-foreground">Company</h4>
+            <ul className="mt-4 space-y-3">
               <li>
                 <Link href="/about" className="text-sm text-text-secondary transition hover:text-foreground">
                   About
                 </Link>
               </li>
               <li>
-                <a href="https://blog.seekolabs.com" target="_blank" rel="noopener noreferrer" className="text-sm text-text-secondary transition hover:text-foreground">
+                <Link href="/careers" className="text-sm text-text-secondary transition hover:text-foreground">
+                  Careers
+                </Link>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-text-secondary transition hover:text-foreground">
                   Blog
                 </a>
               </li>
-              <li>
-                <Link href="/contact" className="text-sm text-text-secondary transition hover:text-foreground">
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
 
+          {/* Resources */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-foreground">Apps</h4>
-            <ul className="mt-4 space-y-2">
+            <h4 className="text-sm font-semibold text-foreground">Resources</h4>
+            <ul className="mt-4 space-y-3">
               <li>
                 <Link href="/apps" className="text-sm text-text-secondary transition hover:text-foreground">
-                  All Apps
+                  Apps
                 </Link>
               </li>
               <li>
-                <a href="https://medium.com/@seekolabs" target="_blank" rel="noopener noreferrer" className="text-sm text-text-secondary transition hover:text-foreground">
-                  Featured
+                <a href="#" className="text-sm text-text-secondary transition hover:text-foreground">
+                  Documentation
                 </a>
               </li>
               <li>
-                <a href="https://press.seekolabs.com" target="_blank" rel="noopener noreferrer" className="text-sm text-text-secondary transition hover:text-foreground">
-                  Press
+                <a href="#" className="text-sm text-text-secondary transition hover:text-foreground">
+                  API
                 </a>
               </li>
             </ul>
           </div>
 
+          {/* Social & Legal */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-widest text-foreground">Legal</h4>
-            <ul className="mt-4 space-y-2">
+            <h4 className="text-sm font-semibold text-foreground">Connect</h4>
+            <ul className="mt-4 space-y-3">
               <li>
                 <a href="#" className="text-sm text-text-secondary transition hover:text-foreground">
-                  Privacy
+                  LinkedIn
                 </a>
               </li>
               <li>
                 <a href="#" className="text-sm text-text-secondary transition hover:text-foreground">
-                  Terms
+                  Twitter
                 </a>
               </li>
               <li>
                 <a href="#" className="text-sm text-text-secondary transition hover:text-foreground">
-                  Cookies
+                  Instagram
                 </a>
               </li>
             </ul>

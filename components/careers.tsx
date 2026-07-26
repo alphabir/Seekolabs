@@ -1,31 +1,25 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
 
 export default function Careers() {
-  const [isHovered, setIsHovered] = useState(false)
-
   return (
     <section className="border-b border-border px-4 py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-bold text-foreground sm:text-4xl lg:text-5xl">
-          Join our team of builders
+          Join us today
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-text-secondary">
-          Help us build the next generation of apps that millions use every day.
+          We work with creative minds, content creators and technical innovators willing to entertain and empower the world.
         </p>
         <Link
           href="/careers"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-          className="mt-8 inline-block border border-foreground bg-background px-6 py-3 text-sm font-bold text-foreground transition sm:px-8 sm:py-4"
-          style={{
-            backgroundColor: isHovered ? '#ffffff' : '#0a0a0a',
-            color: isHovered ? '#0a0a0a' : '#ffffff',
-          }}
+          className="mt-8 inline-flex items-center gap-2 border border-foreground px-6 py-3 text-foreground transition hover:bg-foreground hover:text-background sm:px-8 sm:py-4"
         >
-          See Open Positions
+          See jobs
+          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
         </Link>
       </div>
     </section>
