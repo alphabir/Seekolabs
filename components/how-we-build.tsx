@@ -31,8 +31,8 @@ export default function HowWeBuild() {
 
         <div className="grid gap-12 sm:grid-cols-3">
           {steps.map((step, index) => (
-            <div key={index} className="flex flex-col">
-              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center border border-foreground">
+            <div key={index} className="flex flex-col animate-fade-in-up transition duration-300 hover:translate-y-[-4px]" style={{animationDelay: `${index * 100}ms`}}>
+              <div className="mb-6 inline-flex h-12 w-12 items-center justify-center border border-foreground transition duration-300 hover:border-primary hover:bg-primary/10">
                 <span className="text-lg font-bold text-foreground">{step.number}</span>
               </div>
               <h4 className="text-xl font-bold text-foreground">{step.title}</h4>

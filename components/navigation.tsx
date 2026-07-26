@@ -13,7 +13,7 @@ export default function Navigation() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-5">
           {/* Logo */}
-          <Link href="/" className="text-lg font-bold text-foreground transition hover:opacity-80">
+          <Link href="/" className="text-lg font-bold text-foreground transition duration-300 hover:text-primary">
             SEEKOLABS
           </Link>
 
@@ -21,25 +21,25 @@ export default function Navigation() {
           <div className="hidden items-center gap-8 sm:flex">
             <Link 
               href="/about" 
-              className={`text-sm transition ${isActive('/about') ? 'text-foreground font-semibold' : 'text-text-secondary hover:text-foreground'}`}
+              className={`text-sm transition duration-300 ${isActive('/about') ? 'text-primary font-semibold' : 'text-text-secondary hover:text-foreground'}`}
             >
               About
             </Link>
             <Link 
               href="/apps" 
-              className={`text-sm transition ${isActive('/apps') ? 'text-foreground font-semibold' : 'text-text-secondary hover:text-foreground'}`}
+              className={`text-sm transition duration-300 ${isActive('/apps') ? 'text-primary font-semibold' : 'text-text-secondary hover:text-foreground'}`}
             >
               Apps
             </Link>
             <Link 
               href="/contact" 
-              className={`text-sm transition ${isActive('/contact') ? 'text-foreground font-semibold' : 'text-text-secondary hover:text-foreground'}`}
+              className={`text-sm transition duration-300 ${isActive('/contact') ? 'text-primary font-semibold' : 'text-text-secondary hover:text-foreground'}`}
             >
               Contact
             </Link>
             <Link 
               href="/careers" 
-              className={`text-sm transition ${isActive('/careers') ? 'text-foreground font-semibold' : 'text-text-secondary hover:text-foreground'}`}
+              className={`text-sm transition duration-300 ${isActive('/careers') ? 'text-primary font-semibold' : 'text-text-secondary hover:text-foreground'}`}
             >
               Careers
             </Link>

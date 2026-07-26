@@ -52,19 +52,19 @@ export default function Portfolio() {
 
         <div className="space-y-16">
           {apps.map((app, index) => (
-            <div key={index} className={`grid gap-12 ${index % 2 === 0 ? 'lg:grid-cols-2' : 'lg:grid-cols-2'} lg:items-center`}>
+            <div key={index} className={`grid gap-12 ${index % 2 === 0 ? 'lg:grid-cols-2' : 'lg:grid-cols-2'} lg:items-center animate-fade-in-up`} style={{animationDelay: `${index * 100}ms`}}>
               {/* Left: Text (or right on alternate rows) */}
-              <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
+              <div className={`${index % 2 === 1 ? 'lg:order-2' : ''} ${index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right'}`}>
                 <h3 className="text-3xl font-bold text-foreground sm:text-4xl">{app.name}</h3>
                 <p className="mt-4 text-lg text-text-secondary">{app.description}</p>
                 <div className="mt-6 flex items-center gap-8">
-                  <div>
-                    <div className="text-2xl font-bold text-foreground">{app.downloads}</div>
+                  <div className="transition duration-300 hover:translate-x-1">
+                    <div className="text-2xl font-bold text-primary">{app.downloads}</div>
                     <div className="text-sm text-text-secondary">Downloads</div>
                   </div>
-                  <a href="#" className="inline-flex items-center gap-2 text-foreground transition hover:gap-3 font-semibold">
+                  <a href="#" className="inline-flex items-center gap-2 text-foreground transition duration-300 hover:gap-3 hover:text-primary font-semibold">
                     Get App
-                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </a>
@@ -73,9 +73,9 @@ export default function Portfolio() {
 
               {/* Right: Image placeholder */}
               <div className={`hidden lg:flex items-center justify-center ${index % 2 === 1 ? 'lg:order-1' : ''}`}>
-                <div className="w-full aspect-square bg-surface rounded-lg flex items-center justify-center border border-border">
+                <div className="w-full aspect-square bg-surface rounded-lg flex items-center justify-center border border-border transition duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20 hover:scale-105 cursor-pointer">
                   <div className="text-center">
-                    <div className="text-6xl mb-4">📱</div>
+                    <div className="text-6xl mb-4 animate-pulse">📱</div>
                     <p className="text-text-secondary">{app.name}</p>
                   </div>
                 </div>
